@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url(../webfont.css);
+@import url(/funweb/webfont.css);
 
 /* 초기화 시작 */
 * { box-sizing: border-box; }
@@ -15,14 +15,15 @@ hr { display: none; }
 /* 전체, 웹폰트 */
 @font-face { font-family: "segoeui";
             src: local(※),
-                url(../webfont.css/segoeui.eot?#iefix) format("truetype"), 
-                url(../webfont.css/segoeui.ttf) format("embedded-opentype"),
-                url(../webfont.css/segoeui.woff) format("woff"); }
+                url(/funweb/webfont.css/segoeui.eot?#iefix) format("truetype"), 
+                url(/funweb/webfont.css/segoeui.ttf) format("embedded-opentype"),
+                url(/funweb/webfont.css/segoeui.woff) format("woff"); }
 body { min-width: 1200px; font-family: "segoeui"; }
 /* 전체 끝 */
 
 /* 헤더 시작 */
-#header { display: flex; justify-content: center; height: 100px; align-items: center; background: #6e6e6e; }
+#header { display: flex; justify-content: center; height: 100px; align-items: center; background: #6e6e6e; 
+        position: fixed; width: 100%; top: 0; left: 0; z-index: 99; }
 #header h1 { position: absolute; left: 30px; top: 25px; width: 249px; }
 #header h1 a { display: block; height: 50px; background: url(../images/logo_header.png); 
               text-indent: 100%; white-space: nowrap; overflow: hidden; }
@@ -50,7 +51,8 @@ body { min-width: 1200px; font-family: "segoeui"; }
 /* 슬로건 */
 #slogan { height: 820px; background: url(../images/alice-donovan-rouse-yu68fUQDvOI-unsplash.jpg)no-repeat center / cover; 
           display: flex; flex-direction: column; align-items: center; text-transform: uppercase; 
-          justify-content: center; text-align: center; position: relative; /* margin: 0 20px; */ }
+          justify-content: center; text-align: center; position: relative;
+          margin-top: 100px; /* margin: 0 20px; */ }
 #slogan::before { content: ""; display: block; width: 100%; height: 100%; background: black;
                 position: absolute; top: 0; left: 0; opacity: 0.1; }
 #slogan p { margin-bottom: 50px; font-size: 70px; position: relative; z-index: 1;
